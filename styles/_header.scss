@@ -1,0 +1,129 @@
+header {
+
+    border: 1px solid magenta;
+    display: flex;
+    flex-direction: none;
+    align-items: center;
+    justify-content: space-between;
+
+    padding: 1.6rem 2.4rem 2.4rem 2rem;
+    
+    
+    .hamburger-logo-group {
+        //border: 1px solid blue;
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        justify-content: center;
+        gap: 1.5rem;
+
+        cursor: pointer;
+
+        .hamburger {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            gap: 0.3rem;
+
+            .line {
+                background-color: $dark-grayish-blue;
+                width: 1.5rem;
+                height: 0.3rem;
+            }
+        }
+
+        .menu {
+            background-color: $black;
+            position: fixed;
+            top: 0;
+            left: 0;
+            right: 0;
+            height: 100vh;
+
+            .slide-menu {
+                background-color: $white;
+                height: 100%;
+                width: 65vw;
+
+                padding: 2.3rem;
+
+                img {
+                    transition: transform 0.5s ease;
+
+                    &:hover {
+                        cursor: pointer;
+                        transform: rotate(90deg);
+                    }
+                }
+
+                ul {
+                    margin: 5rem;
+                    font-size: 1.8rem;
+                    font-weight: 700;
+
+                    display: flex;
+                    flex-direction: column;
+                    gap: 2.3rem;
+
+                    list-style: none;
+
+                    a, :active, :visited {
+                        color: $very-vark-blue;
+                        text-decoration: unset;
+
+                        &:hover {
+                            text-decoration: underline;
+                            opacity: 0.75;
+                        }
+                    }
+                }
+            }
+        }
+
+        .hidden {
+            display: none;
+        }
+    }
+
+    .cart-avatar-group {
+        //border: 1px solid green ;
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        justify-content: space-between;
+        gap: 2.2rem;
+
+        .btnCart {
+            cursor: pointer;
+            position: relative;
+
+            .cart-count {
+                position: absolute;
+                top: -25%;
+                right: -25%;
+
+                background-color: $orange;
+                color: $white;
+
+                font-size: 1rem;
+
+                font-weight: 700;
+                line-height: 100%;
+
+                padding: 0.1rem 0.6rem;
+                border-radius: 1rem;
+            }
+        }
+        .avatar {
+            width: 2.5rem;
+            cursor: pointer;
+            border: 2px solid transparent;
+
+            &:hover {
+                border: 2px solid $orange;
+                border-radius: 50%;
+            }
+        }
+    }
+}
